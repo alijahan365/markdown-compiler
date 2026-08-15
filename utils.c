@@ -50,7 +50,7 @@ void print_ast(ASTNode *node, int depth) {
     if (!node) return;
     
     for (int i = 0; i < depth; i++) {
-        printf("  │ ");
+        printf("  | ");
     }
     
     const char *type_names[] = {
@@ -58,7 +58,7 @@ void print_ast(ASTNode *node, int depth) {
         "TEXT", "UNORDERED_LIST", "ORDERED_LIST", "LIST_ITEM", "LINK"
     };
     
-    printf("├── [%s]", type_names[node->type]);
+    printf("|-- [%s]", type_names[node->type]);
     if (node->level > 0) printf(" (Level %d)", node->level);
     if (node->text) printf(" : \"%s\"", node->text);
     if (node->url) printf(" [URL: %s]", node->url);
