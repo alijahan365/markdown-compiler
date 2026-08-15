@@ -124,7 +124,7 @@ Open `index.html` directly in any modern browser or visit the live deployment at
 
 ### 2. Standalone C Compiler Execution (Makefile Automation)
 
-#### Build full project:
+#### Build full C compiler (`md2html.exe`):
 ```powershell
 make
 ```
@@ -157,11 +157,11 @@ gcc -Wall -Wextra -std=c99 -o md2html.exe utils.c lexer.c parser.c symbol_table.
 
 ### 4. Flex & Bison Specification Execution (CSE314 Lab Syllabus)
 
-Build and test formal Flex and Bison spec files using `make flex_bison` or manual commands:
+Build and test formal Flex and Bison spec files using `make flex-bison` or manual commands:
 
-#### Build using Makefile:
+#### Build using Makefile target (`flex-bison`):
 ```powershell
-make flex_bison
+make flex-bison
 ```
 
 #### Manual Build:

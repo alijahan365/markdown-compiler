@@ -37,7 +37,7 @@ main.o: main.c
 flex-bison:
 	bison -d parser.y
 	flex lexer.l
-	gcc parser.tab.c lex.yy.c -o flex_bison_md2html.exe
+	$(CC) $(CFLAGS) parser.tab.c lex.yy.c -o flex_bison_md2html.exe
 
 clean:
 	-$(RM) *.o $(TARGET) flex_bison_md2html.exe lex.yy.c parser.tab.c parser.tab.h 2>NUL
